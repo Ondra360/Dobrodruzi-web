@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dobrodruzi</title>
+
+    <link rel="stylesheet" href="homepage.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HORNÍ LIŠTA
+    ========================== -->
+
+    <header>
+
+        <!-- HAMBURGER MENU -->
+
+        <button class="menu-button" onclick="toggleMenu()" aria-label="Otevřít menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+
+        <!-- TEXT + LOGO -->
+
+        <div class="logo-container">
+
+            <h1 class="text">Dobrodruzi</h1>
+
+            <img
+                src="Screenshot 2026-09-18 205800.png"
+                alt="Logo Dobrodruzi"
+                id="logo"
+            >
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         VYSOUVACÍ MENU
+    ========================== -->
+
+    <div id="side-menu" class="side-menu">
+
+        <button
+            class="close-button"
+            onclick="toggleMenu()"
+            aria-label="Zavřít menu">
+            ×
+        </button>
+
+        <h2>Menu</h2>
+
+        <a href="homepage.html">🏠 Home</a>
+
+        <a href="about.html">ℹ️ About</a>
+
+        <a href="contact.html">📩 Contact</a>
+
+    </div>
+
+
+    <!-- TMA ZA MENU -->
+
+    <div
+        id="overlay"
+        class="overlay"
+        onclick="toggleMenu()">
+    </div>
+
+
+    <!-- =========================
+         HLAVNÍ OBSAH
+    ========================== -->
+
+    <main>
+
+        <section class="intro">
+
+            <h2>Introduction</h2>
+
+            <p>
+                This is the homepage of our website.
+                Here you can find information about our services and offerings.
+            </p>
+
+        </section>
+
+
+        <section class="features">
+
+            <h2>Features</h2>
+
+            <ul>
+
+                <li>
+                    Feature 1: Description of feature 1.
+                </li>
+
+                <li>
+                    Feature 2: Description of feature 2.
+                </li>
+
+                <li>
+                    Feature 3: Description of feature 3.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <section class="contact">
+
+            <h2>Contact Us</h2>
+
+            <p>
+                If you have any questions, feel free to reach out to us
+                through our contact page.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p class="contact-text">
+            Chcete nás kontaktovat?
+        </p>
+
+        <a href="contact.html" class="contact-link">
+            Přejděte na Contact stránku
+        </a>
+
+        <p class="copyright">
+            © 2026 Dobrodruzi
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function toggleMenu() {
+
+            const menu = document.getElementById("side-menu");
+            const overlay = document.getElementById("overlay");
+
+            menu.classList.toggle("open");
+            overlay.classList.toggle("show");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+

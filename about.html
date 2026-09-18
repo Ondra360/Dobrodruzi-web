@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About - Dobrodruzi</title>
+
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+
+    <!-- HORNÍ LIŠTA -->
+
+    <header>
+
+        <button class="menu-button" onclick="toggleMenu()" aria-label="Otevřít menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="logo-container">
+            <h1>Dobrodruzi</h1>
+
+            <img
+                src="Screenshot 2026-09-18 205800.png"
+                alt="Logo Dobrodruzi"
+            >
+        </div>
+
+    </header>
+
+
+    <!-- MENU -->
+
+    <div id="side-menu" class="side-menu">
+
+        <button class="close-button" onclick="toggleMenu()">
+            ×
+        </button>
+
+        <h2>Menu</h2>
+
+        <a href="homepage.html">🏠 Home</a>
+        <a href="about.html">ℹ️ About</a>
+        <a href="contact.html">📩 Contact</a>
+
+    </div>
+
+    <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+
+    <!-- HLAVNÍ OBSAH -->
+
+    <main>
+
+        <div class="page-title">
+            <h2>About</h2>
+
+            <p>
+                Poznejte nás a naše dobrodružství.
+            </p>
+        </div>
+
+
+        <!-- SEKCE 1 -->
+
+        <section class="story">
+
+            <div class="story-image">
+                <img src="about1.jpg" alt="Naše dobrodružství">
+            </div>
+
+            <div class="story-text">
+
+                <span class="number">01</span>
+
+                <h2>Naše začátky</h2>
+
+                <p>
+                    Všechno začalo obyčejnou myšlenkou. Chtěli jsme
+                    objevovat nová místa, zažívat dobrodružství
+                    a vytvářet vzpomínky, na které jen tak nezapomeneme.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEKCE 2 -->
+
+        <section class="story reverse">
+
+            <div class="story-image">
+                <img src="about2.jpg" alt="Cestování">
+            </div>
+
+            <div class="story-text">
+
+                <span class="number">02</span>
+
+                <h2>Objevování světa</h2>
+
+                <p>
+                    Každé nové místo je pro nás další příležitostí
+                    něco poznat. Baví nás příroda, výlety, zajímavá
+                    místa a všechno, co nám přinese nový zážitek.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEKCE 3 -->
+
+        <section class="story">
+
+            <div class="story-image">
+                <img src="about3.jpg" alt="Příroda">
+            </div>
+
+            <div class="story-text">
+
+                <span class="number">03</span>
+
+                <h2>Dobrodružství</h2>
+
+                <p>
+                    Někdy stačí vyrazit ven a nechat se překvapit,
+                    kam nás cesta zavede. Právě tyhle neplánované
+                    chvíle bývají často ty nejlepší.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEKCE 4 -->
+
+        <section class="story reverse">
+
+            <div class="story-image">
+                <img src="about4.jpg" alt="Výprava">
+            </div>
+
+            <div class="story-text">
+
+                <span class="number">04</span>
+
+                <h2>Společné zážitky</h2>
+
+                <p>
+                    Nejlepší dobrodružství nejsou jen o místě,
+                    ale hlavně o lidech, se kterými ho zažíváme.
+                    Proto chceme naše výpravy sdílet s ostatními.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEKCE 5 -->
+
+        <section class="story">
+
+            <div class="story-image">
+                <img src="about5.jpg" alt="Budoucnost">
+            </div>
+
+            <div class="story-text">
+
+                <span class="number">05</span>
+
+                <h2>Co bude dál?</h2>
+
+                <p>
+                    Tohle je teprve začátek. Máme před sebou spoustu
+                    dalších míst, cest a dobrodružství. A kdo ví,
+                    kam se vydáme příště.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p class="contact-text">
+            Chcete nás kontaktovat?
+        </p>
+
+        <a href="contact.html">
+            Přejděte na Contact stránku
+        </a>
+
+        <p class="copyright">
+            © 2026 Dobrodruzi
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        function toggleMenu() {
+
+            const menu = document.getElementById("side-menu");
+            const overlay = document.getElementById("overlay");
+
+            menu.classList.toggle("open");
+            overlay.classList.toggle("show");
+
+        }
+
+    </script>
+
+</body>
+</html>
+

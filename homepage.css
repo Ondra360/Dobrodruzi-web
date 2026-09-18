@@ -1,0 +1,454 @@
+
+/* =========================
+   ZÁKLAD
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    color: #111;
+
+    background: #f5f5f5;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   HORNÍ LIŠTA
+========================= */
+
+header {
+    position: relative;
+
+    width: 100%;
+    height: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   TEXT + LOGO
+========================= */
+
+.logo-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.text {
+    margin: 0;
+
+    font-size: 50px;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.menu-button {
+    position: absolute;
+
+    left: 25px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 52px;
+    height: 52px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #222;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.menu-button:hover {
+    background: #333;
+
+    transform: translateY(-50%) scale(1.05);
+}
+
+.menu-button span {
+    width: 24px;
+    height: 3px;
+
+    background: white;
+
+    border-radius: 5px;
+}
+
+
+/* =========================
+   VYSOUVACÍ MENU
+========================= */
+
+.side-menu {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 300px;
+    height: 100vh;
+
+    background: white;
+
+    z-index: 1000;
+
+    padding: 30px 20px;
+
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.2);
+
+    transform: translateX(-100%);
+
+    transition: transform 0.3s ease;
+}
+
+.side-menu.open {
+    transform: translateX(0);
+}
+
+
+/* =========================
+   NADPIS MENU
+========================= */
+
+.side-menu h2 {
+    margin: 60px 10px 25px;
+
+    font-size: 28px;
+}
+
+
+/* =========================
+   ODKAZY V MENU
+========================= */
+
+.side-menu a {
+    display: block;
+
+    padding: 16px 18px;
+
+    margin-bottom: 8px;
+
+    border-radius: 12px;
+
+    color: #222;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    transition: 0.2s ease;
+}
+
+.side-menu a:hover {
+    background: #f0f0f0;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.close-button {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    line-height: 42px;
+
+    transition: 0.2s ease;
+}
+
+.close-button:hover {
+    background: #444;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================
+   TMA ZA MENU
+========================= */
+
+.overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    z-index: 900;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.overlay.show {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* =========================
+   HLAVNÍ OBSAH
+========================= */
+
+main {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 25px 20px;
+
+    flex: 1;
+}
+
+
+/* =========================
+   SEKCE
+========================= */
+
+section {
+    margin-bottom: 20px;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+    margin: 0 0 8px;
+
+    font-size: 30px;
+}
+
+section p {
+    margin: 0;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features ul {
+    margin-top: 8px;
+
+    padding-left: 25px;
+}
+
+.features li {
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    width: 100%;
+
+    padding: 25px 20px;
+
+    background: #222;
+
+    color: white;
+
+    text-align: center;
+
+    flex-shrink: 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
+/* TEXT V FOOTERU */
+
+.contact-text {
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* ODKAZ NA CONTACT */
+
+.contact-link {
+    display: inline-block;
+
+    margin-top: 5px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+
+    transform: translateY(-1px);
+}
+
+
+/* COPYRIGHT */
+
+.copyright {
+    margin-top: 15px !important;
+
+    font-size: 13px;
+
+    opacity: 0.55;
+}
+
+
+/* =========================
+   TELEFON
+========================= */
+
+@media (max-width: 600px) {
+
+    header {
+        height: 130px;
+    }
+
+    .logo-container {
+        gap: 7px;
+    }
+
+    .text {
+        font-size: 30px;
+    }
+
+    #logo {
+        width: 65px;
+        height: 65px;
+    }
+
+    .menu-button {
+        left: 15px;
+
+        width: 45px;
+        height: 45px;
+
+        border-radius: 12px;
+    }
+
+    .menu-button span {
+        width: 21px;
+    }
+
+    .side-menu {
+        width: 280px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 17px;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+}
+
