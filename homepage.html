@@ -1,178 +1,127 @@
-
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Dobrodruzi</title>
-
+    <title>DobroDruzi – Domškolácká skupina</title>
     <link rel="stylesheet" href="homepage.css">
 </head>
-
 <body>
 
-    <!-- =========================
-         HORNÍ LIŠTA
-    ========================== -->
-
+    <!-- HEADER -->
     <header>
-
-        <!-- HAMBURGER MENU -->
-
         <button class="menu-button" onclick="toggleMenu()" aria-label="Otevřít menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
-
-        <!-- TEXT + LOGO -->
-
         <div class="logo-container">
-
-            <h1 class="text">Dobrodruzi</h1>
-
-            <img
-                src="Screenshot 2026-09-18 205800.png"
-                alt="Logo Dobrodruzi"
-                id="logo"
-            >
-
+            <h1>DobroDruzi</h1>
+            <img src="Screenshot 2026-09-18 205800.png" alt="Logo DobroDruzi">
         </div>
-
     </header>
 
-
-    <!-- =========================
-         VYSOUVACÍ MENU
-    ========================== -->
-
+    <!-- SIDE MENU -->
     <div id="side-menu" class="side-menu">
-
-        <button
-            class="close-button"
-            onclick="toggleMenu()"
-            aria-label="Zavřít menu">
-            ×
-        </button>
-
+        <button class="close-button" onclick="toggleMenu()">×</button>
         <h2>Menu</h2>
-
         <a href="homepage.html">🏠 Home</a>
-
         <a href="about.html">ℹ️ About</a>
-
         <a href="contact.html">📩 Contact</a>
-
     </div>
+    <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
 
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Domškolácká skupina<br>DobroDruzi</h1>
+            <p>Prostor pro společné učení, dobrodružství a rozvoj druhostupňových domškoláků v Mníšku pod Brdy</p>
+            <div class="hero-buttons">
+                <a href="about.html" class="btn btn-primary">Poznejte nás blíž</a>
+                <a href="contact.html" class="btn btn-secondary">Napište nám</a>
+            </div>
+        </div>
+    </section>
 
-    <!-- TMA ZA MENU -->
-
-    <div
-        id="overlay"
-        class="overlay"
-        onclick="toggleMenu()">
-    </div>
-
-
-    <!-- =========================
-         HLAVNÍ OBSAH
-    ========================== -->
-
+    <!-- MAIN -->
     <main>
 
-        <section class="intro">
+        <!-- FEATURES -->
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>16 dětí</h3>
+                <p>Holky a kluci od 6. do 9. třídy v malé, bezpečné a přátelské komunitě.</p>
+            </div>
 
-            <h2>Introduction</h2>
+            <div class="feature-card">
+                <div class="feature-icon">🧭</div>
+                <h3>Svoboda + struktura</h3>
+                <p>Pravidelný rytmus (po–čt 9–14 h) kombinovaný s výlety, workshopy a samostatnými projekty.</p>
+            </div>
 
+            <div class="feature-card">
+                <div class="feature-icon">🌿</div>
+                <h3>Dobrodružství</h3>
+                <p>Voda, hory, expedice, spaní venku a spousta zážitků v přírodě i mimo ni.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Vzdělávání</h3>
+                <p>Spolupráce s kmenovými školami, příprava na přijímačky a podpora při přezkoušení.</p>
+            </div>
+        </div>
+
+        <!-- ABOUT SHORT -->
+        <section class="about-short">
+            <h2>Kdo jsme?</h2>
             <p>
-                This is the homepage of our website.
-                Here you can find information about our services and offerings.
+                Jsme domškolácká skupina vedená rodiči-lektory.  
+                Věříme ve vyvážení svobody a odpovědnosti, přirozeného růstu a disciplíny.  
+                Učíme se společně, tvoříme a vyrážíme za dobrodružstvím.
             </p>
-
+            <a href="about.html" class="btn">Více o nás →</a>
         </section>
 
-
-        <section class="features">
-
-            <h2>Features</h2>
-
-            <ul>
-
-                <li>
-                    Feature 1: Description of feature 1.
-                </li>
-
-                <li>
-                    Feature 2: Description of feature 2.
-                </li>
-
-                <li>
-                    Feature 3: Description of feature 3.
-                </li>
-
-            </ul>
-
-        </section>
-
-
-        <section class="contact">
-
-            <h2>Contact Us</h2>
-
-            <p>
-                If you have any questions, feel free to reach out to us
-                through our contact page.
-            </p>
-
-        </section>
+        <!-- VALUES -->
+        <div class="values">
+            <div class="value-item">
+                <strong>Svoboda i odpovědnost</strong>
+                <span>Respekt k individuálním potřebám</span>
+            </div>
+            <div class="value-item">
+                <strong>Přirozený růst</strong>
+                <span>i zdravá disciplína</span>
+            </div>
+            <div class="value-item">
+                <strong>Řád i neřád :-)</strong>
+                <span>Ani chaos, ani rigidita</span>
+            </div>
+            <div class="value-item">
+                <strong>Společné zážitky</strong>
+                <span>Napříč věkem a obory</span>
+            </div>
+        </div>
 
     </main>
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
+    <!-- FOOTER -->
     <footer>
-
-        <p class="contact-text">
-            Chcete nás kontaktovat?
-        </p>
-
-        <a href="contact.html" class="contact-link">
-            Přejděte na Contact stránku
-        </a>
-
-        <p class="copyright">
-            © 2026 Dobrodruzi
-        </p>
-
+        <p class="contact-text">Chcete nás kontaktovat?</p>
+        <a href="contact.html">Přejděte na Contact stránku</a>
+        <p class="copyright">© 2026 DobroDruzi</p>
     </footer>
 
-
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
-
     <script>
-
         function toggleMenu() {
-
             const menu = document.getElementById("side-menu");
             const overlay = document.getElementById("overlay");
-
             menu.classList.toggle("open");
             overlay.classList.toggle("show");
-
         }
-
     </script>
 
 </body>
-
 </html>
-
