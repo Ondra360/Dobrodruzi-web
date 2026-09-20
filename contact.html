@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 
@@ -6,21 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact - Dobrodruzi</title>
+    <title>Kontakt – DobroDruzi | Mníšek pod Brdy</title>
+
+    <meta name="description" content="Kontaktujte domškoláckou skupinu DobroDruzi v Mníšku pod Brdy. Najdete zde kontaktní údaje a informace, jak se s námi spojit.">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://ondra360.github.io/Dobrodruzi-web/contact.html">
 
     <link rel="stylesheet" href="contact.css">
 </head>
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================== -->
 
+    <!-- HEADER -->
     <header>
 
         <!-- HAMBURGER -->
-
         <button
             class="menu-button"
             onclick="toggleMenu()"
@@ -34,7 +36,6 @@
 
 
         <!-- LOGO + NÁZEV -->
-
         <div class="logo-container">
 
             <h1>Dobrodruzi</h1>
@@ -48,11 +49,9 @@
     </header>
 
 
-    <!-- =========================
-         SIDE MENU
-    ========================== -->
-
-    <div id="side-menu" class="side-menu">
+    <!-- SIDE MENU -->
+    <div id="side-menu"
+         class="side-menu">
 
         <button
             class="close-button"
@@ -66,16 +65,13 @@
         <h2>Menu</h2>
 
         <a href="index.html">🏠 Home</a>
-
         <a href="about.html">ℹ️ About</a>
-
         <a href="contact.html">📩 Contact</a>
 
     </div>
 
 
     <!-- OVERLAY -->
-
     <div
         id="overlay"
         class="overlay"
@@ -83,40 +79,36 @@
     </div>
 
 
-    <!-- =========================
-         HLAVNÍ OBSAH
-    ========================== -->
-
+    <!-- HLAVNÍ OBSAH -->
     <main>
 
         <div class="page-title">
 
-            <h2>Contact</h2>
+            <h2>Kontakt</h2>
 
             <p>
-                Chcete se s námi spojit? Ozvěte se nám.
+                Chcete se s námi spojit?
+                Ozvěte se nám.
             </p>
 
         </div>
 
 
-        <!-- =========================
-             HLAVNÍ KONTAKTY
-        ========================== -->
-
+        <!-- HLAVNÍ KONTAKTY -->
         <section class="main-contacts">
 
-            <!-- KONTAKT 1 -->
 
+            <!-- KONTAKT 1 -->
             <div class="contact-card">
 
                 <div class="contact-image">
 
                     <img
                         src="Screenshot 2026-09-19 161228.png"
-                        alt="Kontakt">
+                        alt="Kontakt na Zuzanu Krásovou">
 
                 </div>
+
 
                 <div class="contact-info">
 
@@ -130,15 +122,16 @@
                         📞 <strong>Telefon</strong>
                     </p>
 
-                    <a href="tel:+420123456789">
+                    <a href="tel:+420602676482">
                         +420 602 676 482
                     </a>
+
 
                     <p>
                         ✉️ <strong>Email</strong>
                     </p>
 
-                    <a href="mailto:info@dobrodruzi.cz">
+                    <a href="mailto:zuzanakrasova@gmail.com">
                         zuzanakrasova@gmail.com
                     </a>
 
@@ -148,16 +141,16 @@
 
 
             <!-- KONTAKT 2 -->
-
             <div class="contact-card reverse">
 
                 <div class="contact-image">
 
                     <img
                         src="Screenshot 2026-09-19 161222.png"
-                        alt="Kontakt">
+                        alt="Kontakt na Mišu Černu">
 
                 </div>
+
 
                 <div class="contact-info">
 
@@ -175,6 +168,7 @@
                         +420 987 654 321
                     </a>
 
+
                     <p>
                         ✉️ <strong>Email</strong>
                     </p>
@@ -190,10 +184,7 @@
         </section>
 
 
-        <!-- =========================
-             DALŠÍ KONTAKTY
-        ========================== -->
-
+        <!-- DALŠÍ KONTAKTY -->
         <h2 class="other-title">
             Další kontakty
         </h2>
@@ -201,13 +192,13 @@
 
         <section class="small-contacts">
 
-            <!-- 1 -->
 
+            <!-- 1 -->
             <div class="small-card">
 
                 <img
                     src="contact3.jpg"
-                    alt="Kontakt">
+                    alt="Kontakt Martin">
 
                 <div>
 
@@ -231,12 +222,11 @@
 
 
             <!-- 2 -->
-
             <div class="small-card">
 
                 <img
                     src="contact4.jpg"
-                    alt="Kontakt">
+                    alt="Kontakt David">
 
                 <div>
 
@@ -260,12 +250,11 @@
 
 
             <!-- 3 -->
-
             <div class="small-card">
 
                 <img
                     src="contact5.jpg"
-                    alt="Kontakt">
+                    alt="Kontakt Jakub">
 
                 <div>
 
@@ -292,10 +281,7 @@
     </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
+    <!-- FOOTER -->
     <footer>
 
         <p class="contact-text">
@@ -313,12 +299,8 @@
     </footer>
 
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
-
+    <!-- JAVASCRIPT -->
     <script>
-
         function toggleMenu() {
 
             const menu =
@@ -328,14 +310,10 @@
                 document.getElementById("overlay");
 
             menu.classList.toggle("open");
-
             overlay.classList.toggle("show");
 
         }
-
     </script>
 
 </body>
-
 </html>
-
